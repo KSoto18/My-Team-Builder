@@ -1,0 +1,24 @@
+{
+  "name": "my-team-builder",
+  "version": "1.0.0",
+  "description": "Generates team-cards from user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSoto18/My-Team-Builder.git"
+  },
+  "keywords": [
+    "team",
+    "builder",
+    "generator"
+  ],
+  "author": "Khris Soto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KSoto18/My-Team-Builder/issues"
+  },
+  "homepage": "https://github.com/KSoto18/My-Team-Builder#readme"
+}
