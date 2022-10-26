@@ -1,7 +1,7 @@
 {
   "name": "my-team-builder",
   "version": "1.0.0",
-  "description": "Generates team-cards from user input",
+  "description": "Generates team-cards on HTML from user input",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/KSoto18/My-Team-Builder/issues"
   },
-  "homepage": "https://github.com/KSoto18/My-Team-Builder#readme"
+  "homepage": "https://github.com/KSoto18/My-Team-Builder#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
