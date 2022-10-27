@@ -4,7 +4,7 @@
   "description": "Generates team-cards on HTML from user input",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
