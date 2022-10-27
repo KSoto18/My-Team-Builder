@@ -1,4 +1,3 @@
-const Employee = require('./main/lib/Employee');
 const Manager = require('./main/lib/Manager');
 const Engineer = require('./main/lib/Engineer');
 const Intern = require('./main/lib/Intern');
@@ -54,7 +53,7 @@ function theManager() {
       {
         type: 'input',
         message: 'What is their ID number?',
-        name: 'idNum',
+        name: 'id',
       },
 
       {
@@ -70,7 +69,7 @@ function theManager() {
       },
     ])
     .then(answers => {
-      const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNum);
+      const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNum);
       teamMembers.push(manager);
       createTeam();
     });
@@ -81,13 +80,13 @@ function theIntern() {
       {
         type: 'input',
         message: 'What is the name of the intern?',
-        name: 'Name',
+        name: 'name',
       },
 
       {
         type: 'input',
         message: 'What is their ID number?',
-        name: 'idNum',
+        name: 'id',
       },
 
       {
@@ -103,7 +102,7 @@ function theIntern() {
       },
     ])
     .then(answers => {
-      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.school);
+      const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
       teamMembers.push(intern);
       createTeam();
     });
@@ -113,14 +112,14 @@ function theEngineer() {
   inquirer.prompt([
       {
         type: 'input',
-        message: 'What is the name of the intern?',
-        name: 'Name',
+        message: 'What is the name of the engineer?',
+        name: 'name',
       },
 
       {
         type: 'input',
         message: 'What is their ID number?',
-        name: 'idNum',
+        name: 'id',
       },
 
       {
@@ -136,7 +135,7 @@ function theEngineer() {
       },
     ])
     .then(answers => {
-      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.github);
+      const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
       teamMembers.push(engineer);
       createTeam();
     });
@@ -144,7 +143,9 @@ function theEngineer() {
 
 function htmlPage () {
   console.log('Success, checkout your new team!');
-  fs.writeFile(distPath, buildTeam(teamMembers), "UTF-8");
+  fs.writeFile(distPath, buildTeam(teamMembers), "UTF-8", function(err, results){
+    if (err) console.log('error', err)
+  });
 }
 
 createTeam();

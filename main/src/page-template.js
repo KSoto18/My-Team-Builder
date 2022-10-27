@@ -1,28 +1,28 @@
 const generateTeam = team => {
 
-    // create the manager html
+    // Creates HTML card for Managers
     const generateManager = manager => {
         return `
-        <div class="card">
-    <div">
-        <h2 class="card-title">${manager.getName()}</h2>
-        <h3 class="card-title">${manager.getRole()}</h3>
+        <div class="card m-3">
+        <div class="card-header">
+            <h2 class="card-title">${manager.getName()}</h2>
+            <h3 class="card-title">${manager.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>ID: ${manager.getId()}</li>
+                <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                <li>Office number: ${manager.getOfficeNumber()}</li>
+            </ul>
+        </div>
     </div>
-    <div class="card-body">
-        <ul>
-            <li>ID: ${manager.getId()}</li>
-            <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-            <li>Office number: ${manager.getOfficeNumber()}</li>
-        </ul>
-      </div>
-    </div>
-     `;
+      `;
     };
 
-    // create the html for engineers
+    // Creates HTML card for Engineers
     const generateEngineer = engineer => {
         return `
-        <div class="card">
+        <div class="card m-3">
         <div class="card-header">
             <h2 class="card-title">${engineer.getName()}</h2>
             <h3 class="card-title">${engineer.getRole()}</h3>
@@ -38,16 +38,16 @@ const generateTeam = team => {
       `;
     };
 
-    // create the html for interns
+    // Creates HTML card for Interns
     const generateIntern = intern => {
         return `
-        <div class="card">
-        <div class="card-header bg-primary text-white">
+        <div class="card m-3">
+        <div class="card-header">
             <h2>${intern.getName()}</h2>
             <h3>${intern.getRole()}</h3>
         </div>
         <div class="card-body">
-            <ul class="list-group">
+            <ul>
                 <li>ID: ${intern.getId()}</li>
                 <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li>School: ${intern.getSchool()}</li>
@@ -58,7 +58,7 @@ const generateTeam = team => {
     };
 
     // Team array to generate pieces of html based on the employee role
-const html = [];
+    const html = [];
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
