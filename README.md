@@ -10,6 +10,7 @@ This is an application that helps the user build a working team that includes Ma
 * [Installation](#installation)
 * [Usage](#usage)
 * [Demo](#demo)
+* [Testing](#testing)
 * [Sources](#sources)
 * [License](#license)
 * [Contact](#contact)
@@ -46,26 +47,33 @@ To use the application do the following:
   ![Screenshot of questions](./main/assets/Screenshot%202022-10-27%20182454.jpg)
 <br>
 
-### Demonstration of Deployed Site
+### Demonstration of Deployed Application
 <br>
  
   ![Screenshot of readme file](./main/assets/Screenshot%202022-10-27%20182323.jpg)
 
 <br><br>
 
+## Testing
+  For testing install 'npm i jest' on your terminal. Then type 'npm test' to run the tests.
+  
+![Screenshot of tests](./main/assets/Screenshot%202022-10-28%20163741.jpg)
+
  ## Sources
   
   - [Node.js 16.18.0 LTS](https://nodejs.org/en/)
   - [Inquirer 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)
   - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+  - [Jest](https://www.npmjs.com/package/jest)
 
 
  ## License
  [MIT](https://choosealicense.com/licenses/mit/)
 
 
- ## Links
- [Application Repo](https://github.com/KSoto18/My-Team-Builder)
+ ## Links 
+ - [Application Repo](https://github.com/KSoto18/My-Team-Builder)
+ - [Application Video](https://drive.google.com/file/d/1zUpPhr_H3bfuWJZ5aCoaYBDpFW79hu4D/view)
 
 
 
