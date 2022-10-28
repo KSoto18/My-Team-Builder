@@ -75,7 +75,7 @@ const generateTeam = team => {
       `;
     };
 
-    // Team array to generate pieces of html based on the employee role
+    // Team Array to build HTML depending on the role
     const htmlPage = [];
     htmlPage.push(team
         .filter(employee => employee.getRole() === "Manager")
