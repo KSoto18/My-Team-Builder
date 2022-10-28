@@ -5,7 +5,7 @@ const Employee = require('../lib/Employee');
         const name = 'Eve';
         const employeeTest = new Employee(name);
     
-        expect(typeof(employeeTest.name)).toBe(name);
+        expect((employeeTest.name)).toBe(name);
     });
 });
 
