@@ -7,4 +7,13 @@ describe('Checks role.', () => {
 
       expect(employeeTest.getRole()).toBe(role);
 });
-})
+});
+
+describe('Manager Office Number', ()=> {
+  it('Checks for the office number', () => {
+      const officeNum = "618";
+      const employeeTest = new Manager('Eve', 14, 'Eve@gmail.com', officeNum);
+  
+      expect(employeeTest.getOfficeNumber()).toBe(officeNum);
+  });
+});

@@ -5,7 +5,7 @@ const Employee = require('../lib/Employee');
         const name = 'Eve';
         const employeeTest = new Employee(name);
     
-        expect((employeeTest.name)).toBe(name);
+        expect((employeeTest.getName())).toBe(name);
     });
 });
 
@@ -14,7 +14,7 @@ describe('Employee ID', ()=> {
         const id = "14";
         const employeeTest = new Employee('Eve', id);
     
-        expect(employeeTest.id).toBe(id);
+        expect(employeeTest.getId()).toBe(id);
     });
 });
 
@@ -24,7 +24,7 @@ describe('Employee Email', ()=> {
         const id = "14";
         const employeeTest = new Employee('Eve', id, email);
     
-        expect(employeeTest.email).toEqual(email);
+        expect(employeeTest.getEmail()).toEqual(email);
     });
 });
 

@@ -5,7 +5,7 @@ describe('GitHub username', () => {
       const githubTest = 'KSoto18';
       const employeeTest = new Engineer('Eve', 14, 'Eve@gmail.com', githubTest);
 
-      expect(employeeTest.github).toBe(githubTest);
+      expect(employeeTest.getGithub()).toBe(githubTest);
   });
 })
 
