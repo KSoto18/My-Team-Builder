@@ -1,10 +1,32 @@
 
 .title {
-    text-shadow: 2px 2px 5px #2596be;
+    text-shadow: 3px 3px 5px #2596be;
     font-family: monospace;
     font-size: 80px;
 }
 
 .card {
-    box-shadow: 0px 0px 20px 5px #2596be;
+    box-shadow: 0px 0px 20px 5px white;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    margin: 20px;
+}
+
+.manager-color {
+    background-color: #52A6F0;
+}
+
+.employee-color {
+    background-color: #5DCDDE;
+}
+
+.intern-color {
+   background-color: #5BF5EF;
+}
+
+.engineer-color {
+    background-color: #57EBCB;
 }

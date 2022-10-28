@@ -3,10 +3,10 @@ const generateTeam = team => {
     // Creates HTML card for Managers
     const generateManager = manager => {
         return `
-        <div class="card m-3">
-        <div class="card-header bg-info text-white">
+        <div class="card">
+        <div class="card-header manager-color text-white">
             <h2>${manager.getName()}</h2>
-            <h3>${manager.getRole()}</h3>
+            <h3><i class="fa-solid fa-people-roof"></i> ${manager.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul>
@@ -22,10 +22,10 @@ const generateTeam = team => {
     // Creates HTML card for Employees
     const generateEmployee = employee => {
         return `
-        <div class="card m-3">
-        <div class="card-header bg-info text-white">
+        <div class="card">
+        <div class="card-header employee-color text-white">
             <h2>${employee.getName()}</h2>
-            <h3>${employee.getRole()}</h3>
+            <h3><i class="fa-solid fa-computer"></i> ${employee.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul>
@@ -40,10 +40,10 @@ const generateTeam = team => {
     // Creates HTML card for Engineers
     const generateEngineer = engineer => {
         return `
-        <div class="card m-3">
-        <div class="card-header bg-dark text-white">
+        <div class="card">
+        <div class="card-header engineer-color text-white">
             <h2>${engineer.getName()}</h2>
-            <h3>${engineer.getRole()}</h3>
+            <h3><i class="fa-solid fa-robot"></i> ${engineer.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul>
@@ -59,10 +59,10 @@ const generateTeam = team => {
     // Creates HTML card for Interns
     const generateIntern = intern => {
         return `
-        <div class="card m-3">
-        <div class="card-header bg-success text-white">
+        <div class="card">
+        <div class="card-header intern-color text-white">
             <h2>${intern.getName()}</h2>
-            <h3>${intern.getRole()}</h3>
+            <h3><i class="fa-solid fa-graduation-cap"></i> ${intern.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul>
@@ -132,6 +132,7 @@ module.exports = team => {
                 </div>
             </div>
         </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     </body>
     </html>
         `;
