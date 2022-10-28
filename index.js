@@ -1,3 +1,5 @@
+//Imported Modules
+const Employee = require('./main/lib/Employee');
 const Manager = require('./main/lib/Manager');
 const Engineer = require('./main/lib/Engineer');
 const Intern = require('./main/lib/Intern');
@@ -15,6 +17,7 @@ const teamMembers = [];
 // This Function lets the user choose what type of employee to add
 function startApp () {
   function createTeam () {
+    //Prompts user to choose the type of employee the would like to add
     inquirer.prompt([
       {
         type: 'list',
@@ -28,6 +31,9 @@ function startApp () {
         case 'Manager':
           theManager();
         break;
+        case 'Employee':
+          theEmployee();
+        break;
         case 'Intern':
           theIntern();
         break;
@@ -40,8 +46,37 @@ function startApp () {
       }
     })
   }
-// Function for creating Manager, Intern, and Engineer - inquirer questions
+
+// Functions for creating Manager, Emplyee, Intern, and Engineer - inquirer questions
 // Pushes new Employees into teamMembers Array
+
+function theEmployee() {
+  inquirer.prompt([
+      {
+        type: 'input',
+        message: 'What is the name of the Manager?',
+        name: 'name',
+      },
+
+      {
+        type: 'input',
+        message: 'What is their ID number?',
+        name: 'id',
+      },
+
+      {
+        type: 'input',
+        message: 'What is their email?',
+        name: 'email',
+      }
+    ])
+    .then(answers => {
+      const employee = new Employee(answers.name, answers.id, answers.email);
+      teamMembers.push(employee);
+      createTeam();
+    });
+};
+
 function theManager() {
   inquirer.prompt([
       {
