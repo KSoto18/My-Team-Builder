@@ -10,7 +10,7 @@ describe('GitHub username', () => {
 })
 
 describe('Checks role.', () => {
-    describe('Check if role is correct', () => {
+    it('Check if role is correct', () => {
         const role = 'Engineer';
         const employeeTest = new Engineer('Eve', 14, 'Eve@gmail.com', 'KSoto18', role);
 

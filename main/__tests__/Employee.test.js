@@ -1,4 +1,4 @@
-const Employee = require('../main/lib/Employee');
+const Employee = require('../lib/Employee');
 
  describe('Employee Input', ()=> {
     it('Check if Name is a string', () => {
@@ -21,9 +21,10 @@ describe('Employee ID', ()=> {
 describe('Employee Email', ()=> {
     it('Checks the Employees Email', () => {
         const email = 'Eve@gmail.com';
+        const id = "14";
         const employeeTest = new Employee('Eve', id, email);
     
-        expect(employeeTest.email).toBe(email);
+        expect(employeeTest.email).toEqual(email);
     });
 });
 

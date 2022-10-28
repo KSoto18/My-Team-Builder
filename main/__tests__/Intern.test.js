@@ -10,7 +10,7 @@ describe('School Name', () => {
 })
 
 describe('Checks role.', () => {
-    describe('Check if role is correct', () => {
+    it('Check if role is correct', () => {
         const role = 'Intern';
         const employeeTest = new Intern('Eve', 14, 'Eve@gmail.com', 'KSoto18', role);
 

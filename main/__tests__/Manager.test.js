@@ -1,10 +1,10 @@
 const Manager = require('../lib/Manager');
 
 describe('Checks role.', () => {
-    describe('Check if role is correct', () => {
-        const role = 'Manager';
-        const employeeTest = new Manager('Eve', 14, 'Eve@gmail.com', 'KSoto18', role);
+  it('Check if role is correct', () => {
+      const role = 'Manager';
+      const employeeTest = new Manager('Eve', 14, 'Eve@gmail.com', '618', role);
 
-        expect(employeeTest.getRole()).toBe(role);
-  });
+      expect(employeeTest.getRole()).toBe(role);
+});
 })
