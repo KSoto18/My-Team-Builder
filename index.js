@@ -23,7 +23,7 @@ function startApp () {
         type: 'list',
         message: 'What is the role of the new employee you would like to add?',
         name: 'newEmployee',
-        choices: ['Manager', 'Intern', 'Engineer', 'No More Additions']
+        choices: ['Manager', 'Employee', 'Intern', 'Engineer', 'No More Additions']
       }
     ])
     .then(function(userInput){
@@ -54,7 +54,7 @@ function theEmployee() {
   inquirer.prompt([
       {
         type: 'input',
-        message: 'What is the name of the Manager?',
+        message: 'What is the name of the Employee?',
         name: 'name',
       },
 

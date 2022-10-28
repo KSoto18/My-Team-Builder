@@ -19,6 +19,24 @@ const generateTeam = team => {
       `;
     };
 
+    // Creates HTML card for Employees
+    const generateEmployee = employee => {
+        return `
+        <div class="card m-3">
+        <div class="card-header bg-info text-white">
+            <h2>${employee.getName()}</h2>
+            <h3>${employee.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li><b>ID: </b>${employee.getId()}</li>
+                <li><b>Email: </b><a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+            </ul>
+        </div>
+    </div>
+      `;
+    };
+
     // Creates HTML card for Engineers
     const generateEngineer = engineer => {
         return `
@@ -58,27 +76,36 @@ const generateTeam = team => {
     };
 
     // Team array to generate pieces of html based on the employee role
-    const html = [];
-    html.push(team
+    const htmlPage = [];
+    htmlPage.push(team
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
+        .join("")
     );
-    html.push(team
+
+    htmlPage.push(team
+        .filter(employee => employee.getRole() === "Employee")
+        .map(employee => generateEmployee(employee))
+        .join("")
+    );
+
+    htmlPage.push(team
         .filter(employee => employee.getRole() === "Engineer")
         .map(engineer => generateEngineer(engineer))
         .join("")
     );
-    html.push(team
+
+    htmlPage.push(team
         .filter(employee => employee.getRole() === "Intern")
         .map(intern => generateIntern(intern))
         .join("")
     );
 
-    return html.join("");
+    return htmlPage.join("");
 }
 
 module.exports = team => {
-    // template literal - html body that calls the generate team function
+    // HTML BODY
     return `
     <!DOCTYPE html>
     <html lang="en">
